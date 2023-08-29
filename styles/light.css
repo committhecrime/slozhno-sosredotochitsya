@@ -2,11 +2,100 @@
   Специально для светлой темы при наличии класса.
   Здесь окажутся стили, которые нужно переопределить принудительно,
   переключая тему
-*/
+*/ 
+@media (prefers-color-scheme: light) {
+    
+  .page.theme_auto {
+    --background-color: #FFF1F7;
+    --accent-color: #FF8DCB;
+    --shadow-color: #FF0070;
+    --heading-color: #353430;
+    --font-color: #353430;
+    background-color: var(--background-color);
+  }
+  .decorated-zone {
+    background-image: url('../images/cover-image-light.png');
+  }
+
+  .header__theme-menu-button {
+    color: var(--font-color);
+  }
+
+  .header__text {
+    background-color: var(--accent-color);
+    color: var(--font-color);
+  }
+
+  
+  .header__text::after {
+    border-color: var(--font-color);
+  }
+
+  .header-pseudo {
+    border-color: var(--font-color);
+  }
+
+
+  .accent-subtitle {
+    background-color: var(--accent-color);
+    color: var(--font-color);
+  }
+
+  .subtitle, .text{
+    color: var(--font-color);
+  }
+
+  .footer__text::after, .footer__text::before {
+    display: none;
+  }
+  
+}
 
 .page.theme_light {
-  /* сохраните этот селектор в приведённом виде.
-    Так стили написанные ниже будут иметь больший вес,
-    чем стили в медиазапросе предпочтений пользователя
-  */
+  --background-color: #FFF1F7;
+  --accent-color: #FF8DCB;
+  --shadow-color: #FF0070;
+  --heading-color: #353430;
+  --font-color: #353430;
+  background-color: var(--background-color);
+
+  .decorated-zone {
+    background-image: url('../images/cover-image-light.png');
+  }
+
+  .header__theme-menu-button {
+    color: var(--font-color);
+  }
+  
+
+  .header__text {
+    background-color: var(--accent-color);
+  }
+
+  .header__text::after {
+    border-color: var(--font-color);
+  }
+
+  .header-pseudo {
+   display: none;
+  }
+
+  .header-pseudo:after {
+    display: block;
+   }
+
+
+  .accent-subtitle {
+    background-color: var(--accent-color);
+    color: var(--font-color);
+  }
+
+  .subtitle, .text{
+    color: var(--font-color);
+  }
+
+  .footer__text::after, .footer__text::before {
+    border-color: var(--font-color);
+  }
+
 }
