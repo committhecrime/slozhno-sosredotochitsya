@@ -9,6 +9,7 @@
 }
 
 .header {
+  height: 100vh;
   display: grid;
   grid-template-columns: 1fr;
 }
@@ -139,6 +140,7 @@
 
 .footer {
   position: relative;
+  height: 100vh;
 }
 
 .footer__text {
@@ -311,10 +313,10 @@
     grid-template-rows: 192px 230px 318px;
     gap: 20px;
   }
-
 }
 
 @media (width >= 1024px) {
+
   .gallery-container {
     grid-template-rows: 260px 315px 428px;
   }
