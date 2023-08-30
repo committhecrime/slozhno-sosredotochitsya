@@ -3,99 +3,37 @@
   Здесь окажутся стили, которые нужно переопределить принудительно,
   переключая тему
 */ 
-@media (prefers-color-scheme: light) {
-    
-  .page.theme_auto {
-    --background-color: #FFF1F7;
-    --accent-color: #FF8DCB;
-    --shadow-color: #FF0070;
-    --heading-color: #353430;
-    --font-color: #353430;
-    background-color: var(--background-color);
-  }
-  .decorated-zone {
-    background-image: url('../images/cover-image-light.png');
-  }
-
-  .header__theme-menu-button {
-    color: var(--font-color);
-  }
-
-  .header__text {
-    background-color: var(--accent-color);
-    color: var(--font-color);
-  }
-
-  
-  .header__text::after {
-    border-color: var(--font-color);
-  }
-
-  .header-pseudo {
-    border-color: var(--font-color);
-  }
-
-
-  .accent-subtitle {
-    background-color: var(--accent-color);
-    color: var(--font-color);
-  }
-
-  .subtitle, .text {
-    color: var(--font-color);
-  }
-
-  .footer__text::after, .footer__text::before {
-    display: none;
-  }
-  
-}
 
 .page.theme_light {
-  --background-color: #FFF1F7;
-  --accent-color: #FF8DCB;
+  --title-color: #FFC2E6;
   --shadow-color: #FF0070;
-  --heading-color: #353430;
-  --font-color: #353430;
-  background-color: var(--background-color);
-
-  .decorated-zone {
-    background-image: url('../images/cover-image-light.png');
-  }
-
-  .header__theme-menu-button {
-    color: var(--font-color);
-  }
-  
-
-  .header__text {
-    background-color: var(--accent-color);
-  }
-
-  .header__text::after {
-    border-color: var(--font-color);
-  }
+  --accent-color: #FF8DCB;
+  --background-color: #000028;
+  --text-color: #353430;
+  --decorated-zone-color: #353430;
+  background-image: url('../images/cover-image-light.png');
 
   .header-pseudo {
-   display: none;
+    display: none;
   }
-
-  .header-pseudo:after {
-    display: block;
-   }
-
-
-  .accent-subtitle {
-    background-color: var(--accent-color);
-    color: var(--font-color);
-  }
-
-  .subtitle, .text {
-    color: var(--font-color);
-  }
-
-  .footer__text::after, .footer__text::before {
-    border-color: var(--font-color);
-  }
-
 }
+
+@media (prefers-color-scheme: light) {
+  .page.theme_auto {
+    --title-color: #FFC2E6;
+    --shadow-color: #FF0070;
+    --accent-color: #FF8DCB;
+    --background-color: #000028;
+    --text-color: #353430;
+    --decorated-zone-color: #353430;
+    background-image: url('../images/cover-image-light.png');
+  
+    .header-pseudo {
+      display: none;
+    }
+  }
+}
+
+
+
+
