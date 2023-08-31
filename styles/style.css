@@ -111,7 +111,7 @@
 .subtitle {
   color: var(--accent-color);
   font-weight: 700;
-  font-size: var(--subtitle-size);;
+  font-size: var(--subtitle-size);
   max-width: 315px;
 }
 
