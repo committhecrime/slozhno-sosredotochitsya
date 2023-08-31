@@ -2,14 +2,13 @@
 
 .page {
   /* сохраните в разметке и стилях класс page. На его основе работает скрипт. */
-  font-family: 'IBM Plex Mono';
-  font-size: 18px;
+  font-size: var(--subtitle-size);
   line-height: 1.3;
   background-color: var(--background-color);
   background-image: url('../images/cover-image-dark.png');
   background-attachment: fixed;
   background-position: center;
-  background-size: contain;
+  background-size: cover;
   padding: 20px;
 }
 
@@ -97,7 +96,6 @@
   font-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
   color: var(--title-color);
   text-shadow: 4px 4px 0px var(--shadow-color);
-  max-height: 130px;
 }
 
 .header__text {
@@ -107,38 +105,31 @@
   font-weight: 700;
   line-height: 23.4px;
   justify-self: end;
+  align-self: center;
 }
 
 .subtitle {
   color: var(--accent-color);
   font-weight: 700;
-  font-size: 18px;
+  font-size: var(--subtitle-size);;
   max-width: 315px;
 }
 
 .accent-subtitle {
   color: var(--background-color);
   font-weight: 700;
-  font-size: 18px;
+  font-size: var(--subtitle-size);;
 }
 
 .focus__link {
   text-decoration: none;
   color: inherit;
   position: relative;
-}
-
-.focus__link::after {
-  content: 'выяснили';
-  color: var(--shadow-color);
-  position: absolute;
-  left: 2px;
-  top: 2px;
-  z-index: -1;
+  text-shadow: 2px 2px 0px var(--shadow-color);
 }
 
 .focus__link:hover {
-  text-decoration: underline;
+  border-bottom: 1px solid var(--text-color);
 }
 
 .focus__link:focus-visible {
@@ -170,10 +161,6 @@
 }
 
 .column {
-  flex-basis: 32%;
-}
-
-.first-column {
   flex-basis: 32%;
 }
 
@@ -229,7 +216,6 @@
   font-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
   color: var(--title-color);
   text-shadow: 2px 2px 0px var(--accent-color);
-  max-height: 130px;
   font-weight: 700;
   line-height: 0.825;
 }
@@ -247,27 +233,26 @@
 
 @media (width <= 768px) {
   .header {
-    margin-block-end: 218px;
+    margin-block-end: 40px;
   }
 
   .header__text {
-    align-self: center;
-    margin-block-start: 85px;
+    align-self: start;
   }
 
   .header__theme-menu {
     justify-self: end;
-    margin: 0;
+    align-self: end;
+    margin-block-end: 145px;
   }
 
   .header__theme-menu-list {
     flex-direction: column;
-    margin-block-start: 175px;
     gap: 15px;
   }
 
   .header__title {
-    margin-block-start: 100px;
+    align-self: flex-start;
   }
 
   .layout-2-column {
@@ -288,8 +273,12 @@
     max-width: 216px;
   }
   
+  .footer {
+    margin-block-start: 60px;
+  }
+
   .footer__title {
-    margin-block-start: 135px;
+    margin-block-start: 0;
   }
 }
 
@@ -345,14 +334,13 @@ TODO: mobile ver + mobile clamp + change theme
   }
 
   .header {
-    grid-template-rows: 67px 100px 63px 194px 50px 117px 56px;
-    margin-block-end: 46px;
+    margin-block-end: 30px;
   }
 
   .header__text {
     max-width: 100%;
-    grid-row-start: 6;
     margin-block-start: 0;
+    align-self: flex-start;
   }
 
   .header__title {
@@ -360,16 +348,17 @@ TODO: mobile ver + mobile clamp + change theme
     line-height: 0.825;
     position: initial;
     margin-block-start: 0;
-    grid-row-start: 4;
+    padding-block-end: 20px;
+    align-self: center;
   }
 
   .header__theme-menu {
-    max-height: 100px;
-    margin-block-start: 67px;
+    align-self: center;
+    margin-block-start: 27px;
+    margin-block-end: 0;
   }
 
   .header__theme-menu-list {
-    max-height: 100px;
     margin-block-start: 0px;
   }
 
@@ -400,25 +389,6 @@ TODO: mobile ver + mobile clamp + change theme
   }
 
   .footer {
-    margin-block-start: 50px;
-  }
-
-  .footer__title {
-    margin-block-start: 0;
-  }
-
-}
-
-@media (width >= 1024px) {
-  
-  .header__text {
-    max-height: 71px;
-  }
-}
-
-@media (width < 1024px) {
-  
-  .header__text {
-    max-height: 117px;
+    margin-block-start: 40px;
   }
 }
