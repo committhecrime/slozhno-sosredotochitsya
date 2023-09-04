@@ -155,7 +155,7 @@
   background-color: var(--accent-color);
 }
 
-.layout-2-column {
+.layout-2-column, .layout-3-column {
   display: flex;
   gap: 20px;
 }
@@ -163,11 +163,6 @@
 .attention, .gallery {
   display: flex;
   flex-direction: column;
-  gap: 20px;
-}
-
-.layout-3-column {
-  display: flex;
   gap: 20px;
 }
 
@@ -269,7 +264,6 @@
   }
 
   .layout-3-column {
-    display: flex;
     flex-direction: column;
   }
 
