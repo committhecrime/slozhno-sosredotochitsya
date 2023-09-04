@@ -5,9 +5,12 @@
 :root {
   --title-color: #DB00FF;
   --accent-color: #FF0070;
+  --accent-color-text: #000028;
   --background-color: #000028;
+  --side-subtitle: #FF0070;
   --text-color: #F1B2CE;
   --shadow-color: #FF0070;
   --decorated-zone-color: #FF0070;
+  --hover-color: rgba(255, 0, 112, 0.40);
   --subtitle-size: 18px;
 }

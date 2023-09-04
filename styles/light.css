@@ -8,9 +8,12 @@
   --title-color: #FFC2E6;
   --shadow-color: #FF0070;
   --accent-color: #FF8DCB;
+  --accent-color-text: #353430;
   --background-color: #000028;
+  --side-subtitle: #353430;
   --text-color: #353430;
   --decorated-zone-color: #353430;
+  --hover-color: rgba(50, 49, 45, 0.40);
   background-image: url('../images/cover-image-light.png');
 
   .header-pseudo {
@@ -23,9 +26,12 @@
     --title-color: #FFC2E6;
     --shadow-color: #FF0070;
     --accent-color: #FF8DCB;
+    --accent-color-text: #353430;
     --background-color: #000028;
+    --side-subtitle: #353430;
     --text-color: #353430;
     --decorated-zone-color: #353430;
+    --hover-color: rgba(50, 49, 45, 0.40);
     background-image: url('../images/cover-image-light.png');
   
     .header-pseudo {
