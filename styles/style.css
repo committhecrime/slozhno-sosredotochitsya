@@ -53,11 +53,6 @@
   border-right: 1px solid var(--decorated-zone-color);
 }
 
-
-.decorated-zone-footer::after {
-
-}
-
 .header-pseudo {
   color: var(--accent-color);
   position: absolute;
